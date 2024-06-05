@@ -15,3 +15,20 @@ function createAdjacencyList() {
   }
   return list;
 }
+
+// create a function that takes a vertex (the [x, y] points) and tells us at what index it's at
+// to be able to look for it's possible moves in the adjacency list using the index
+function vertexIndex(vertex) {
+  const indexList = {};
+  // k is the counter from 0 to 63, we'll use it as the value of the x and y points (vertex) to find out at what index they are
+  let k = 0;
+
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+      indexList[[i, j]] = k;
+      k++;
+    }
+  }
+  // returns the index of the vertex
+  return indexList[vertex];
+}
