@@ -6,7 +6,7 @@ import moves from "./moves.mjs";
 
 // create an adjacency list and populate it with every possible move for every point from (0, 0) to (7, 7) and each point is represented by the index of the array
 // meaning the possible moves for (0,0) can be found at index 0 and for (7,7) we can look at the arrays at index 63
-function createAdjacencyList() {
+export function createAdjacencyList() {
   const list = [];
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
@@ -18,7 +18,7 @@ function createAdjacencyList() {
 
 // create a function that takes a vertex (the [x, y] points) and tells us at what index it's at
 // to be able to look for it's possible moves in the adjacency list using the index
-function vertexIndex(vertex) {
+export function getVertexIndex(vertex) {
   const indexList = {};
   // k is the counter from 0 to 63, we'll use it as the value of the x and y points (vertex) to find out at what index they are
   let k = 0;
