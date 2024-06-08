@@ -1,7 +1,7 @@
 import { createAdjacencyList, visited } from "./adjacencyList.mjs";
 import node from "./node.mjs";
 
-function knightMoves(start, end) {
+export default function knightMoves(start, end) {
   // create the chessBoard with every square as the key and its value is all the possible moves from that square
   const chessBoard = createAdjacencyList();
   // make the start point the root of our tree
